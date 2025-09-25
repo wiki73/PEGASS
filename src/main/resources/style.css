@@ -1,0 +1,12 @@
+.root {
+
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.leftListView {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+    -fx-control-inner-background: rgba(0, 0, 0, 0.15);
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+}

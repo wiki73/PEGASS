@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-image: url(&quot;fon.jpg&quot;);" styleClass=".root" stylesheets="style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controller">
+   <left>
+      <GridPane alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="512.0" BorderPane.alignment="TOP_LEFT">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="22.666666666666668" minHeight="0.0" prefHeight="22.666666666666668" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="-Infinity" prefHeight="378.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Средние" textFill="WHITE" GridPane.columnIndex="1" />
+            <Label text="Долгие" textFill="WHITE" GridPane.columnIndex="2" />
+            <Label text="Короткие" textFill="WHITE" />
+            <ListView fx:id="ShortList2" prefHeight="200.0" prefWidth="200.0" styleClass="leftListView" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ListView fx:id="ShortList3" prefHeight="200.0" prefWidth="200.0" styleClass="leftListView" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ListView fx:id="ShortList1" prefHeight="200.0" prefWidth="200.0" styleClass="leftListView" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </left>
+   <center>
+      <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="200.0" prefWidth="384.0" style="-fx-border-color: blue; -fx-pref-width: 200;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="409.0" fitWidth="410.0" layoutX="34.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@knight.png" />
+               </image>
+            </ImageView>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </padding>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="384.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView maxWidth="1.7976931348623157E308" minWidth="-Infinity" opacity="0.05" prefHeight="200.0" prefWidth="384.0" style="f: red;" />
+            <TextField fx:id="taskInputField" />
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#handleAddTask" prefHeight="31.0" prefWidth="674.0" text="Button" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
