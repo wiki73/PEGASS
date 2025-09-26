@@ -2,7 +2,9 @@ package com;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
 import javafx.scene.Scene;
@@ -11,6 +13,10 @@ import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Controller {
 
@@ -24,6 +30,65 @@ public class Controller {
     @FXML
     private TextField taskInputField;
 
+
+    @FXML
+    private void openGoals(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Goals.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Цели");
+            stage.setScene(new Scene(root));
+
+            // Запуск в полноэкранном режиме
+            stage.setFullScreen(true);
+
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void openBattle(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Battle.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Драка");
+            stage.setScene(new Scene(root));
+
+            // Запуск в полноэкранном режиме
+            stage.setFullScreen(true);
+
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void openDiary(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Diary.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Дневник");
+            stage.setScene(new Scene(root));
+
+            // Запуск в полноэкранном режиме
+            stage.setFullScreen(true);
+
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     // Инициализация контроллера
 //    @FXML
 //    public void initialize() {

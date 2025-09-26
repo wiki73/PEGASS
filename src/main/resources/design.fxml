@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
@@ -39,7 +40,7 @@
    <center>
       <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="200.0" prefWidth="384.0" style="-fx-border-color: blue; -fx-pref-width: 200;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="409.0" fitWidth="410.0" layoutX="34.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="409.0" fitWidth="410.0" layoutX="9.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@knight.png" />
                </image>
@@ -61,10 +62,18 @@
          <children>
             <ListView maxWidth="1.7976931348623157E308" minWidth="-Infinity" opacity="0.05" prefHeight="200.0" prefWidth="384.0" style="f: red;" />
             <TextField fx:id="taskInputField" />
+            <Button mnemonicParsing="false" onAction="#handleAddTask" prefHeight="31.0" prefWidth="674.0" text="Button" />
+            <HBox prefHeight="100.0" prefWidth="200.0" />
          </children>
       </VBox>
    </right>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#handleAddTask" prefHeight="31.0" prefWidth="674.0" text="Button" BorderPane.alignment="CENTER" />
+      <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openGoals" prefHeight="141.0" prefWidth="234.0" text="Goals Window" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openBattle" prefHeight="88.0" prefWidth="211.0" text="Battle Window" />
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openDiary" prefHeight="40.0" prefWidth="255.0" text="Diary" />
+         </children>
+      </HBox>
    </bottom>
 </BorderPane>
